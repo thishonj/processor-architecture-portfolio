@@ -1,6 +1,6 @@
 # Processor Architecture Portfolio
 
-![CI](https://github.com/<your-username>/processor-architecture-portfolio/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/thishonj/processor-architecture-portfolio/actions/workflows/ci.yml/badge.svg)
 
 Learning projects toward **CPU design, RTL design and design verification**.
 I am an M.Sc. ICT student (Embedded Systems) at FAU Erlangen-Nürnberg. I know embedded C
@@ -63,7 +63,7 @@ processor-architecture-portfolio/
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/processor-architecture-portfolio.git
+git clone https://github.com/thishonj/processor-architecture-portfolio.git
 cd processor-architecture-portfolio/01-c-memory-fundamentals
 make run
 ```
