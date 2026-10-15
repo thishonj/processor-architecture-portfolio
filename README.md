@@ -68,8 +68,3 @@ cd processor-architecture-portfolio/01-c-memory-fundamentals
 make run
 ```
 
-## Contact
-
-<your-name> · <LinkedIn URL> · <email>
-
-Licensed under MIT. See [LICENSE](LICENSE).
