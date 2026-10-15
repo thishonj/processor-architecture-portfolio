@@ -1,0 +1,51 @@
+# --- Build output ---
+build/
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.out
+a.out
+
+# --- Simulation / EDA output ---
+*.vcd
+*.fst
+*.vvp
+*.wlf
+*.log
+obj_dir/
+sim_build/
+work/
+xsim.dir/
+*.jou
+*.pb
+transcript
+modelsim.ini
+
+# --- STM32 / IDE (keep source, drop generated files) ---
+Debug/
+Release/
+.settings/
+.metadata/
+*.launch
+.mxproject
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- Debugger / sanitizer artefacts ---
+core
+core.*
+vgcore.*
+*.gcda
+*.gcno
+
+# Exception: the CPU test program image is a source artefact
+!05-systemverilog-cpu/prog/test.hex

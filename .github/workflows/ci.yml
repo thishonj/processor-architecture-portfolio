@@ -1,0 +1,30 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  c-memory-fundamentals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run project 01
+        working-directory: 01-c-memory-fundamentals
+        run: |
+          make all
+          ./build/06_ring_buffer
+      - name: Sanitizer build
+        working-directory: 01-c-memory-fundamentals
+        run: make asan
+  riscv-and-cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y gcc-riscv64-unknown-elf iverilog
+      - name: Project 02 checks
+        working-directory: 02-riscv-assembly
+        run: make check
+      - name: Project 05 simulation
+        working-directory: 05-systemverilog-cpu
+        run: |
+          make hex
+          make sim | tee sim.log
+          grep -q "PASS: all checks passed" sim.log
